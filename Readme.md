@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Артур Атапин](https://up.htmlacademy.ru/univer-html1/2/user/2431083).
-* Наставник: [Алексей Владимирович Самохвалов] (https://htmlacademy.ru/profile/id1443429) .
+* Наставник: [Алексей Владимирович Самохвалов] (https://htmlacademy.ru/profile/id1443429).
 
 ---
 
