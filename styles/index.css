@@ -1,0 +1,22 @@
+.visually-hidden{
+    display: none;
+}
+ul.main-navigation li{
+    padding: 10px;
+    display: inline;
+    font-family: sans-serif;
+}
+
+div.footer-contacts li{
+    display: inline;
+    padding: 10px;
+}
+
+.footer-phone-number{
+    margin: 25px;
+    font-size: 30px;
+}
+
+.footer-htmlacademy-link{
+    margin: 15px;
+}
