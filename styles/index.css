@@ -1,12 +1,32 @@
+/* preprocedure */
 .visually-hidden{
     display: none;
 }
-ul.main-navigation li{
+
+/* HEADER */
+
+.header ul{
+    padding: 0;
+    margin: 0;
+    display:inline;
+
+}
+
+/* nav.main-navigation li{
     padding: 10px;
     display: inline;
     font-family: sans-serif;
-}
+} */
 
+/* .main-menu-list li{
+    padding: 10px;
+    display: inline;
+    font-family: sans-serif;
+} */
+
+/* MAIN */
+
+/* FOOTER */
 div.footer-contacts li{
     display: inline;
     padding: 10px;
