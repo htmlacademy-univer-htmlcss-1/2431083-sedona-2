@@ -1,5 +1,23 @@
 .filters-label{
     padding:35px 70px 70px 70px;
+    background-image: url("../images/catalog/filters-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.filters-label .filter-icons{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.filters-label .hotel-icon{
+    width: 12px;
+    height: 12px;
+}
+
+.filters-label .arrow-icons{
+    width: 6.393px;
+    height: 9.938px;
 }
 
 .filters-label .header{
@@ -65,10 +83,11 @@
     margin-right:auto;
 }
 
-.filters-label .form-container .right .price-container .range-slider .handler input{
-  /* position:absolute; */
+/* .filters-label .form-container .right .price-container .range-slider .handler input{
+    position:absolute;
 
 }
+*/
 
 .filters-label .form-container .right .price-container .range-slider .input{
     display: flex;
@@ -87,6 +106,10 @@
     border-radius: 0 4px 4px 0;
 }
 
+.filters-label .favorite-button .right .left, .filters-label .favorite-button .right .right{
+    color:white;
+}
+
 .filters-label .form-container .right .buttons-container{
     display: flex;
     flex-direction: column;
@@ -100,13 +123,13 @@ input[type=checkbox], input[type=radio]{
     height: 20px;
 }
 
-.house-type-container .container, .infrastructure-container .container{
+.hotel-type-container .container, .infrastructure-container .container{
     display: flex;
     flex-direction: column;
     gap:16px;
 }
 
-.house-type-container .container div, .infrastructure-container .container div{
+.hotel-type-container .container div, .infrastructure-container .container div{
     display: flex;
     flex-direction: row;
     gap:16px;
@@ -118,6 +141,7 @@ input[type=checkbox], input[type=radio]{
 
 .filters-label .buttons-container .reset-button{
     font-size: 16px;
+    background-color: transparent;
 }
 
 .filters-label .title{
@@ -163,13 +187,13 @@ input[type=checkbox], input[type=radio]{
 }
 
 .catalog hr{
-    color: #E6E6E6;
-    background: #E6E6E6;
-    background-color: #E6E6E6;
-    border-color: #E6E6E6;
+    color: rgba(230, 230, 230, 1);
+    background: rgba(230, 230, 230, 1);
+    background-color: rgba(230, 230, 230, 1);
+    border-color: rgba(255, 255, 255, 0);
     margin-top:40px;
     margin-bottom:40px;
-    width: 1060px;
+    width: 100%;
     height: 0;
 }
 
@@ -189,17 +213,23 @@ input[type=checkbox], input[type=radio]{
 }
 
 .catalog .sorting .view-button{
-    padding:14px 12px;
+    padding:14px 24px;
     border-radius: 4px;
     border: 2px solid #E5E5E5;
     background:white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 14px;
 }
 
 .catalog .sorting .cur-view-button{
-    padding:14px 12px;
+    padding:14px 24px;
     border-radius: 4px;
     border: 2px solid #000;
     background:white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 14px;
 }
 
 .catalog .catalog-items{
@@ -222,6 +252,12 @@ input[type=checkbox], input[type=radio]{
     padding:20px;
     border-radius: 4px;
     border: 1px solid #E6E6E6;
+}
+
+.catalog .catalog-items .frame-line .item .hotel-photo
+{
+    display: flex;
+    width: 100%;
 }
 
 .catalog .catalog-items .frame-line .item .text-container{
@@ -256,10 +292,22 @@ input[type=checkbox], input[type=radio]{
     gap:20px;
 }
 
-.catalog .catalog-items .frame-line .item .rating-container .stars{
+.catalog .catalog-items .frame-line .item .rating-container .stars-container{
     margin-top:auto;
     margin-bottom:auto;
     margin-right:auto;
+    display: flex;
+    gap:5px;
+}
+
+.catalog .catalog-items .frame-line .item .stars-container .star{
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-right:auto;
+    background-image:url("../images/catalog/star.svg");
+
+    width: 18px;
+    height: 17px;
 }
 
 .catalog .catalog-items .frame-line .item .rating-container .rate{
@@ -295,4 +343,16 @@ input[type=checkbox], input[type=radio]{
     padding: 16.364px 0 17.636px 0;
     background:none;
     color:#000;
+}
+
+.newslatter-label .frame-box .title{
+    color: #000;
+}
+
+.newslatter-label .frame-box .description{
+    color: #333333;
+}
+
+.newslatter-label .frame-box{
+    background-image: none;
 }

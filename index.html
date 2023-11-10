@@ -2,36 +2,40 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/index.css">
     <title>HTML Academy: Седона</title>
   </head>
 
   <body>
     <div class="body-container">
-      <header>
+      <header data-test="header">
         <h1 class="visually-hidden">Седона</h1>
           <nav class="header-main-navigation">
-            <div class="logo-container" style="position:relative; width:140px;"><a style="position: absolute;" href="https://htmlacademy.ru/"><img class="logo" src="images/logo.svg" alt="Logo"></a></div>
+            <div class="logo-container"><a href="https://htmlacademy.ru/"><img class="logo" src="images/logo.svg" alt="Sedona Logo"></a></div>
             <ul class="header-main-nav-list">
               <li><strong><a href="index.html">Главная</a></strong></li>
               <li><strong><a href="#">О Седоне</a></strong></li>
-              <li><strong><a href="catalog.html">Гостиница</a></strong></li>
+              <li><strong><a href="catalog.html">Гостиницы</a></strong></li>
             </ul>
           </nav>
-
           <div class="header-main-menu">
             <ul class="header-main-menu-list">
-              <li><strong><a href="#"><img src="#" alt="Поиск"></a></strong></li>
-              <li><strong><a href="#"><img src="#" alt="Избранное"></a></strong></li>
+              <li><strong><a href="#"><img class="nav-search" src="images/index/nav_search.svg" alt="Поиск"></a></strong></li>
+              <li><strong><a href="#"><img class="nav-favorite" src="images/index/nav_favorite.svg" alt="Избранное"><span class="round">12</span></a></strong></li>
             </ul>
             <button class="brown-button"><strong>Хочу сюда!</strong></button>
           </div>
       </header>
 
-      <main>
-        <section class="hero">
+      <main data-test="main">
+        <section class="hero" data-test="hero">
           <h2 class="visually-hidden">О нас</h2>
-          <img class="background" src="images/index-background.jpg">
+          <div class="hero-banner-container">
+            <img class="background" alt='#' src="images/index/index-background.jpg">
+            <img class="welcome" alt='#' src="images/index/welcome.svg">
+            <img class="hero-frame" alt='#' src="images/index/hero-frame.svg">
+          </div>
           <section class="label description-label">
             <div class="frame-box">
               <div class="text-container">
@@ -42,27 +46,29 @@
           </section>
         </section>
 
-        <section class="advantages-label">
+        <section class="advantages-label" data-test="advantages">
           <h2 class="visually-hidden">Преимущества</h2>
           <div class="frame-line">
-            <div class="end-frame-box" style="background: #82B3D3;">
+            <div class="frame-box">
               <div class="text-container">
                 <p class="title">Настоящий городок</p>
                 <hr>
                 <p class="description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
             </div>
-            <img src="#">
+            <div class="photo-container">
+              <img class="photo" src="images/index/photo-1.jpg">
+            </div>
           </div>
           <div class="frame-line">
-            <div class="frame-box" style="background: rgba(131, 179, 211, 0.12);" >
+            <div class="frame-box" >
               <div class="text-container">
                 <p class="title">Небольшая площадь</p>
                 <hr>
                 <p class="description">Все достопримечательности находятся очень близко</p>
               </div>
             </div>
-            <div class="frame-box" style="background: rgba(131, 179, 211, 0.20);" >
+            <div class="frame-box" >
               <div class="text-container">
                 <p class="title">Красивая
                   дорога</p>
@@ -70,7 +76,7 @@
                 <p class="description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </div>
-            <div class="frame-box" style="background: rgba(131, 179, 211, 0.12);"  >
+            <div class="frame-box"  >
               <div class="text-container">
                 <p class="title">Мало
                   туристов</p>
@@ -80,8 +86,10 @@
             </div>
           </div>
           <div class="frame-line">
-            <img src="#">
-            <div class="end-frame-box" style="background: #82B3D3;" >
+            <div class="photo-container">
+              <img class="photo" src="images/index/photo-2.jpg">
+            </div>
+            <div class="frame-box" >
               <div class="text-container">
                 <p class="title">Там есть мост дьявола</p>
                 <hr>
@@ -104,23 +112,23 @@
         <section class="recomendations-label">
           <h2 class="visually-hidden">Рекомендации</h2>
           <div class="frame-line">
-            <div class="frame-box" style="background: rgba(131, 179, 211, 0.20);">
+            <div class="frame-box">
               <div class="text-container">
-                <img src="#">
+                <img alt="#" src="images/index/advantage-icon-1.svg">
                 <p class="title">Жильё</p>
                 <p class="description">Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
               </div>
             </div>
-            <div class="frame-box" style="background: rgba(131, 179, 211, 0.12);">
+            <div class="frame-box">
               <div class="text-container">
-                <img src="#">
+                <img alt="#" src="images/index/advantage-icon-2.svg">
                 <p class="title">Еда</p>
                 <p class="description">Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!</p>
               </div>
             </div>
-            <div class="frame-box" style="background: rgba(131, 179, 211, 0.20);">
+            <div class="frame-box">
               <div class="text-container">
-                <img src="#">
+                <img alt="#" src="images/index/advantage-icon-3.svg">
                 <p class="title">Сувениры</p>
                 <p class="description">Не только китайского,<br>но и настоящего местного<br>производства!</p>
               </div>
@@ -128,7 +136,7 @@
           </div>
         </section>
 
-        <section class="label hotel-search-label">
+        <section class="label hotel-search-label" data-test="search">
           <h2 class="visually-hidden">Поиск отеля</h2>
           <div class="frame-box">
             <div class="text-container">
@@ -139,12 +147,12 @@
           </div>
         </section>
 
-        <section class="label newslatter-label">
+        <section class="label newslatter-label" data-test="subscribe">
           <h2 class="visually-hidden">Рассылка</h2>
           <div class="frame-box">
             <div class="text-container">
-              <p style="color:#FFFFFF" class="title">Подпишитесь на рассылку</p>
-              <p style="color:#FFFFFF" class="description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+              <p class="title">Подпишитесь на рассылку</p>
+              <p class="description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
             </div>
             <form class="newslatter-form" action="#" method="post">
               <input class="email-input" type="email" placeholder="Ваш e-mail">
@@ -154,16 +162,16 @@
         </section>
       </main>
 
-      <footer class="main-footer">
+      <footer class="main-footer" data-test="footer">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts-frame">
           <ul class="footer-contacts-social">
-            <li><a href="https://vk.com/htmlacademy"><img src="#" alt="VKontakte"></a></li>
-            <li><a href="https://t.me/htmlacademy"><img src="#" alt="Telegram"></a></li>
-            <li><a href="https://www.youtube.com/user/htmlacademyru"><img src="#" alt="Youtube"></a></li>
+            <li><a href="https://vk.com/htmlacademy"><img src="images/social-1.svg" alt="VKontakte"></a></li>
+            <li><a href="https://t.me/htmlacademy"><img src="images/social-2.svg" alt="Telegram"></a></li>
+            <li><a href="https://www.youtube.com/user/htmlacademyru"><img src="images/social-3.svg" alt="Youtube"></a></li>
           </ul>
             <span><a href="tel:+7(812)812-12-12">+7 (812) 812-12-12</a></span>
-            <a class="html-academy-logo" href="https://t.me/htmlacademy"><img src="#" alt="HTML Academy"></a>
+            <a class="html-academy-logo" href="https://t.me/htmlacademy"><img src="images/html-academy-logo.svg" alt="HTML Academy"></a>
         </div>
       </footer>
     </div>
