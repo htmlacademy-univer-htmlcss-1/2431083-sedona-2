@@ -2,12 +2,39 @@
 .visually-hidden{
     display: none;
 }
+
+                                /* FONTS */
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+}
+
 /**/
 
                                 /* HEADER */
+
+ol{
+    padding: 0; /*for ol*/
+    margin:0;   /*for ol*/
+}
+
 body{
     margin: 0;
     background: #F2F2F2;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
 }
 .body-container{
     background-color:white;
@@ -38,6 +65,7 @@ header .header-main-navigation{
     margin-right:auto;
     gap:30px;
     margin-left: 70px;
+    font-weight: 700;
 }
 
 header .header-main-menu{
@@ -79,13 +107,14 @@ header .header-main-menu .round{
     position: relative;
     left: 10px;
     right: 0;
-    top: -12px;
+    top: -15px;
     bottom: 0;
     margin: auto;
     margin-bottom: 0;
     margin-right: 0;
     background-color: #7DB54F;
     border-radius: 10px;
+    font-size: 12px;
 }
 
 .brown-button{
@@ -107,6 +136,7 @@ button, .href-button, input[type=submit], input[type=reset]{
     padding:8px 50px;
     border-radius: 4px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 a, a:visited, a:active{
@@ -161,10 +191,6 @@ a, a:visited, a:active{
     width: 100%;
 }
 
-/* .advantages-label .photo{
-
-} */
-
 .advantages-label .frame-line, .recomendations-label .frame-line {
     width:100%;
     display:flex;
@@ -189,8 +215,8 @@ a, a:visited, a:active{
     flex-flow: row wrap;
     padding:0;
     margin:0;
-    height:32vw;
-    width:50%;
+    width: 50%;
+    aspect-ratio: 1/1;
     justify-content: center;
     background-size:cover;
 }
@@ -198,17 +224,18 @@ a, a:visited, a:active{
 .advantages-label .frame-line:first-of-type .frame-box, .advantages-label .frame-line:last-of-type .frame-box{
     background-color: #82B3D3;
     color: #FFF;
-    font-family: PT Sans;
+}
+
+.title{
+    font-weight: 700;
 }
 
 .advantages-label .frame-line:nth-of-type(2) .frame-box .title{
     color: #000;
-    font-family: PT Sans;
 }
 
 .advantages-label .frame-line:nth-of-type(2) .frame-box .description{
     color: #333;
-    font-family: PT Sans;
 }
 
 .advantages-label .frame-line:nth-of-type(2) .frame-box:nth-of-type(odd){
@@ -252,10 +279,8 @@ a, a:visited, a:active{
 
 .advantages-label .frame-box .title, .recomendations-label .frame-box .title{
     margin:0;
-    font-family: PT Sans;
     font-size: 24px;
     font-style: normal;
-    font-weight: 700;
     line-height: 28px; /* 116.667% */
     text-transform: uppercase;
 }
@@ -263,7 +288,6 @@ a, a:visited, a:active{
 .advantages-label .frame-box .description,.recomendations-label .frame-box .description{
     margin:0;
     /* Texts/Text blocks */
-    font-family: PT Sans;
     font-size: 18px;
     font-style: normal;
 }
@@ -324,10 +348,8 @@ a, a:visited, a:active{
 
 .label .text-container .title{
     color: #000;
-    /*font-family: PT Sans;*/
     font-size: 30px;
     font-style: normal;
-    font-weight: 700;
     line-height: 36px; /* 120% */
     text-transform: uppercase;
     margin:0;
@@ -336,10 +358,8 @@ a, a:visited, a:active{
 .label .text-container .description{
     color: #333;
     /* Texts/Text basic */
-    font-family: PT Sans;
     font-size: 22px;
     font-style: normal;
-    font-weight: 400;
     line-height: 26px; /* 118.182% */
     margin:0;
 }
@@ -393,7 +413,6 @@ footer .contacts-frame span a{
     width:331px;
     height:40px;
     font-size:40px;
-    font-weight:400;
     text-align:center;
 }
 
