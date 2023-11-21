@@ -1,0 +1,457 @@
+/**/
+.visually-hidden{
+    display: none;
+}
+
+                                /* FONTS */
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+/**/
+
+                                /* HEADER */
+
+ol{
+    padding: 0; /*for ol*/
+    margin:0;   /*for ol*/
+}
+
+body{
+    margin: 0;
+    background: #F2F2F2;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+}
+.body-container{
+    background-color:white;
+    color:white;
+    padding:0;
+    margin: 0 40px 0 40px;
+    box-shadow:0 0 15px 0 rgba(0, 0, 0, 0.20);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+header .logo-container{
+    position:relative;
+    width:140px;
+}
+header .logo-container a{
+    position: absolute;
+    z-index: 100;
+}
+
+header .header-main-navigation{
+    display:flex;
+    flex-direction: row;
+    margin-right:auto;
+    gap:30px;
+    margin-left: 70px;
+    font-weight: 700;
+}
+
+header .header-main-menu{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    margin-left:auto;
+    margin-right:70px;
+}
+
+header ul{
+    padding:0;
+}
+
+header li{
+    display:inline;
+}
+
+header .header-main-navigation li{
+    padding:20px 16px;
+}
+
+header .header-main-menu li{
+    padding:22px 12px;
+}
+
+header .header-main-menu button{
+    font-size: 16px;
+}
+
+header .header-main-menu .nav-favorite{
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header .header-main-menu .round{
+    color: #FFF;
+    position: relative;
+    left: 10px;
+    right: 0;
+    top: -15px;
+    bottom: 0;
+    margin: auto;
+    margin-bottom: 0;
+    margin-right: 0;
+    background-color: #7DB54F;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.brown-button{
+    background:#756157;
+}
+
+.blue-button{
+    background-color: #82B3D3;
+}
+
+.blue-button{
+    background-color: none;
+}
+
+button, .href-button, input[type=submit], input[type=reset]{
+    margin:auto;
+    border:none;
+    color: #FFFFFF;
+    padding:8px 50px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+a, a:visited, a:active{
+    text-decoration: none;
+    color:black;
+}
+
+.href-button, .href-button:visited, .href-button:active{
+    color: #FFFFFF;
+}
+
+                                /* MAIN */
+/* .hero-welcome-banner{
+
+} */
+
+.hero-banner-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .background{
+    width:100%;
+}
+
+.hero .welcome{
+    size: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    /* margin-top: 170px; */
+}
+
+.hero-frame{
+    position:absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+    margin-bottom: 0;
+}
+
+.advantages-label .photo-container{
+    display: flex;
+    width: 100%;
+}
+
+.advantages-label .frame-line, .recomendations-label .frame-line {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+}
+
+.frame-box{
+    position: relative;
+}
+
+.frame-box .text-container{
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.advantages-label .frame-box, .recomendations-label .frame-box{
+    display:flex;
+    flex-flow: row wrap;
+    padding:0;
+    margin:0;
+    width: 50%;
+    aspect-ratio: 1/1;
+    justify-content: center;
+    background-size:cover;
+}
+
+.advantages-label .frame-line:first-of-type .frame-box, .advantages-label .frame-line:last-of-type .frame-box{
+    background-color: #82B3D3;
+    color: #FFF;
+}
+
+.title{
+    font-weight: 700;
+}
+
+.advantages-label .frame-line:nth-of-type(2) .frame-box .title{
+    color: #000;
+}
+
+.advantages-label .frame-line:nth-of-type(2) .frame-box .description{
+    color: #333;
+}
+
+.advantages-label .frame-line:nth-of-type(2) .frame-box:nth-of-type(odd){
+    background-color: #83B3D31F;
+}
+
+.advantages-label .frame-line:nth-of-type(2) .frame-box:nth-of-type(even){
+    background-color: #83B3D333;
+}
+
+
+.advantages-label .frame-line .frame-box hr{
+    border-width: 1px;
+    width: 60px;
+    padding:0;
+    margin-top:30px;
+    margin-bottom:30px;
+    height: 0;
+}
+
+.advantages-label .frame-line:nth-of-type(2) hr{
+    color: rgba(0, 0, 0, 0.30);
+    background: rgba(0, 0, 0, 0.30);;
+    background-color: rgba(0, 0, 0, 0.30);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.advantages-label .frame-line:first-of-type hr, .advantages-label .frame-line:last-of-type hr{
+    color: rgba(255, 255, 255, 0.30);
+    background: rgba(255, 255, 255, 0.30);
+    background-color: rgba(255, 255, 255, 0.30);
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.advantages-label .text-container, .recomendations-label .text-container{
+    text-align: center;
+    justify-content: center;
+    padding:28%;
+    width: 45%;
+}
+
+.advantages-label .frame-box .title, .recomendations-label .frame-box .title{
+    margin:0;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 28px; /* 116.667% */
+    text-transform: uppercase;
+}
+
+.advantages-label .frame-box .description,.recomendations-label .frame-box .description{
+    margin:0;
+    /* Texts/Text blocks */
+    font-size: 18px;
+    font-style: normal;
+}
+
+.recomendations-label .frame-box:nth-of-type(odd){
+    background-color: #83B3D31F;
+}
+
+.recomendations-label .frame-box:nth-of-type(even){
+    background-color: #FFFFFF;
+}
+
+.recomendations-label .text-container .description{
+    color: #333333;
+}
+.recomendations-label .text-container .title{
+    color: black;
+    padding:0;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.inviting-label .text-container p, .hotel-search-label .text-container p{
+    margin:0;
+}
+
+.hotel-search-label .frame-box{
+    padding: 64px 0 64px 0;
+}
+
+.inviting-label .text-container{
+    padding: 64px 0 64px 0  ;
+}
+
+.label button{
+    font-size: 20px;
+}
+
+.label .frame-box{
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    gap:54px;
+
+}
+
+.label .text-container{
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.hero .label .text-container{
+    gap:25px;
+    padding: 69px 0 69px 0;
+}
+
+.label .text-container .title{
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    line-height: 36px; /* 120% */
+    text-transform: uppercase;
+    margin:0;
+}
+
+.label .text-container .description{
+    color: #333;
+    /* Texts/Text basic */
+    font-size: 22px;
+    font-style: normal;
+    line-height: 26px; /* 118.182% */
+    margin:0;
+}
+
+.newslatter-label .frame-box{
+    background-image: url("../images/index/subscribe-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.newslatter-label .text-container .title{
+    color:#FFFFFF;
+}
+
+.newslatter-label .text-container .description{
+    color:#FFFFFF;
+}
+
+.newslatter-label .frame-box{
+    display:flex;
+    flex-direction: column;
+    padding: 96px 258px 104px 258px;
+}
+
+.newslatter-form{
+    display: flex;
+    flex-direction: row;
+}
+
+.newslatter-form .email-input{
+    background-color: #F2F2F2;
+    border:none;
+    border-radius: 4px 0 0 4px;
+    padding:0 20px;
+    width:100%;
+}
+
+.newslatter-form .submit-input{
+    border-radius: 0 4px 4px 0;
+    font-size:20px;
+}
+
+                                /* FOOTER */
+
+footer .contacts-frame span{
+    margin-left:auto;
+    padding:5px 194px 5px 195px;
+}
+
+footer .contacts-frame span a{
+    width:331px;
+    height:40px;
+    font-size:40px;
+    text-align:center;
+}
+
+footer .contacts-frame li{
+    padding:0 10px;
+}
+
+footer{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    padding: 40px 70px 30px 70px;
+}
+
+footer .contacts-frame{
+    text-align: justify;
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    padding:0;
+    margin:0;
+    /*justify-content: space-between;*/
+}
+footer .contacts-frame ul{
+    display:flex;
+    padding:0;
+    margin:0;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+footer .contacts-frame li{
+    margin:auto;
+    display:inline;
+}
+
+footer .html-academy-logo{
+    margin-left:auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-right:0;
+}
