@@ -1,3 +1,9 @@
+
+fieldset{
+    padding: 0;
+    margin: 0;
+}
+
 .filters-label{
     padding:35px 70px 70px 70px;
     background-image: url("../images/catalog/filters-background.jpg");
@@ -59,23 +65,23 @@
     gap:70px;
 }
 
-.filters-label .form-container .right .price-container .input span, .filters-label .form-container .right .price-container .input input{
+.filters-label .form-container .right .price-container-group .input span, .filters-label .form-container .right .price-container-group .input input{
     border:none;
     color:black;
     font-size: 18px;
 }
 
-.filters-label .form-container .right .price-container .input .left, .filters-label .form-container .right .price-container .input .right{
+.filters-label .form-container .right .price-container-group .input .left, .filters-label .form-container .right .price-container-group .input .right{
     padding:12px 20px;
 }
 
-.filters-label .form-container .right .price-container .range-slider{
+.filters-label .form-container .right .price-container-group .range-slider{
     display: flex;
     flex-direction: column;
     gap:36px;
 }
 
-.filters-label .form-container .right .price-container .range-slider .handler{
+.filters-label .form-container .right .price-container-group .range-slider .handler{
     display: flex;
     flex-direction: row;
     position: relative;
@@ -83,25 +89,25 @@
     margin-right:auto;
 }
 
-/* .filters-label .form-container .right .price-container .range-slider .handler input{
+/* .filters-label .form-container .right .price-container-group .range-slider .handler input{
     position:absolute;
 
 }
 */
 
-.filters-label .form-container .right .price-container .range-slider .input{
+.filters-label .form-container .right .price-container-group .range-slider .input{
     display: flex;
     flex-direction: row;
     gap:2px;
 }
 
-.filters-label .form-container .right .price-container .range-slider .input .left{
+.filters-label .form-container .right .price-container-group .range-slider .input .left{
     display: flex;
     border-radius: 4px 0 0 4px;
 }
 
 
-.filters-label .form-container .right .price-container .range-slider .input .right{
+.filters-label .form-container .right .price-container-group .range-slider .input .right{
     display:flex;
     border-radius: 0 4px 4px 0;
 }
@@ -123,13 +129,17 @@ input[type=checkbox], input[type=radio]{
     height: 20px;
 }
 
-.hotel-type-container .container, .infrastructure-container .container{
+.hotel-type-container-group, .infrastructure-container-group, .price-container-group{
+    border: none;
+}
+
+.hotel-type-container-group .container, .infrastructure-container-group .container{
     display: flex;
     flex-direction: column;
     gap:16px;
 }
 
-.hotel-type-container .container div, .infrastructure-container .container div{
+.hotel-type-container-group .container div, .infrastructure-container-group .container div{
     display: flex;
     flex-direction: row;
     gap:16px;
@@ -161,12 +171,7 @@ input[type=checkbox], input[type=radio]{
     padding:50px 70px 60px 70px;
 }
 
-.catalog .sorting{
-    display: flex;
-    flex-direction: row;
-}
-
-.catalog .sorting form{
+.catalog .sorting .sorting-form{
     display: flex;
     flex-direction: row;
     gap:70px;
@@ -181,9 +186,25 @@ input[type=checkbox], input[type=radio]{
     gap:8px;
 }
 
-.catalog .sorting .count{
+.catalog .sorting .hotel-sorting-group{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: #000;
+}
+
+.catalog .sorting .hotel-sorting-group .title{
     text-transform: uppercase;
     font-size: 30px;
+    margin: auto;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.catalog .sorting .hotel-sorting-group .sorting-form{
+    margin: auto;
+    margin-right: 0;
 }
 
 .catalog hr{
@@ -197,8 +218,8 @@ input[type=checkbox], input[type=radio]{
     height: 0;
 }
 
-.catalog p{
-    color:black;
+.catalog .catalog-items{
+    padding-top: 40px;
 }
 
 .catalog .catalog-items .item .text-container{
@@ -252,6 +273,10 @@ input[type=checkbox], input[type=radio]{
     padding:20px;
     border-radius: 4px;
     border: 1px solid #E6E6E6;
+}
+
+.catalog .catalog-items .frame-line .item .title{
+    font-size: 24px;
 }
 
 .catalog .catalog-items .frame-line .item .hotel-photo
@@ -322,6 +347,7 @@ input[type=checkbox], input[type=radio]{
     flex-direction: row;
     margin-right: auto;
     gap:8px;
+    font-weight: 700;
 }
 .catalog .pagination .pag{
     font-size: 20px;
@@ -330,18 +356,32 @@ input[type=checkbox], input[type=radio]{
     justify-content: center;
     align-items: center;
     margin:0;
-    padding: 11.364px 0 12.636px 0;
     width: 60px;
+    border-radius: 4px;
+
 }
 
 .catalog .pagination .cur-pag{
     background-color:#F2F2F2;
-    color:#000;
 }
 
 .catalog .pagination .reduc-pag{
     padding: 16.364px 0 17.636px 0;
     background:none;
+    color:#000;
+}
+
+.catalog .pagination a{
+    text-align: center;
+    padding: 16.364px 0 17.636px 0;
+    width: 60px;
+}
+
+.catalog .pagination .pag a{
+    color:#FFF;
+}
+
+.catalog .pagination .cur-pag a{
     color:#000;
 }
 

@@ -41,7 +41,7 @@
                     <form>
                         <div class="form-container">
                             <div class="left">
-                                <div class="infrastructure-container">
+                                <fieldset class="infrastructure-container-group">
                                     <p class="title">Инфраструктура:</p>
                                     <div class="container">
                                         <div>
@@ -57,8 +57,8 @@
                                             <label for="chbx_infstrct_3">Wi-Fi</label>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="hotel-type-container">
+                                </fieldset>
+                                <fieldset class="hotel-type-container-group">
                                     <p class="title">Тип Жилья:</p>
                                     <div class="container">
                                         <div>
@@ -74,10 +74,10 @@
                                             <label for="rad_hotel_3">Апартаменты</label>
                                         </div>
                                     </div>
-                                </div>
+                                </fieldset>
                             </div>
                             <div class="right">
-                                <div class="price-container">
+                                <fieldset class="price-container-group">
                                   <p class="title">Стоимость, ₽:</p>
                                   <div class="range-slider">
                                     <div class="input">
@@ -95,7 +95,7 @@
                                         <input type="range">
                                     </div>
                                   </div>
-                                </div>
+                                </fieldset>
                                 <div class="buttons-container">
                                     <input class="blue-button apply-button" type="submit" value="Применить">
                                     <input class="transp-button reset-button" type="reset" value="Сбросить">
@@ -111,116 +111,120 @@
           <h2 class="visually-hidden">Каталог</h2>
           <section class="sorting">
             <h2 class="visually-hidden">Меню сортировки</h2>
-              <p class="count">Найдено гостиниц: 38<p>
-              <form class="sorting-form" action="#" method="post">
-                <select class="filters-list">
-                  <option value="cheap">Сначала дешевые</option>
-                  <option value="cheap">Сначала дорогие</option>
-                  <option value="cheap">Сначала популярные</option>
-                </select>
-                <section class="view">
-                  <h2 class="visually-hidden">Вид плитки</h2>
-                  <input class="cur-view-button view-button" type="button" style="background-image: url('images/catalog/mode-1.svg');">
-                  <input class="view-button" type="button" style="background-image: url('images/catalog/mode-2.svg');">
-                  <input class="view-button" type="button" style="background-image: url('images/catalog/mode-3.svg');">
-                </section>
-              </form>
+              <fieldset class="hotel-sorting-group">
+                <div class="title">Найдено гостиниц: 38</div>
+                <form class="sorting-form" action="#" method="post">
+                  <select class="filters-list">
+                    <option value="cheap">Сначала дешевые</option>
+                    <option value="cheap">Сначала дорогие</option>
+                    <option value="cheap">Сначала популярные</option>
+                  </select>
+                  <section class="view">
+                    <ol>
+                      <il><h2 class="visually-hidden">Вид плитки</h2></il>
+                      <il><input class="cur-view-button view-button" type="button" style="background-image: url('images/catalog/mode-1.svg');"></il>
+                      <il><input class="view-button" type="button" style="background-image: url('images/catalog/mode-2.svg');"></il>
+                      <il><input class="view-button" type="button" style="background-image: url('images/catalog/mode-3.svg');"></il>
+                    </ol>
+                  </section>
+                </form>
+              </fieldset>
           </section>
 
           <section class="catalog-items">
             <h2 class="visually-hidden">Каталог отелей</h2>
-            <div class="frame-line">
-              <div class="item">
+            <ol class="frame-line">
+              <li class="item">
                 <a href="#"><img class="hotel-photo" src="images/catalog/hotel-1.png"></a>
                 <div class="title-container">
-                  <a class="title">Amara Resort &amp; Spa</a>
+                  <a class="title" href="#" class="title">Amara Resort &amp; Spa</a>
                 </div>
                 <div class="text-container">
                   <span class="name">Гостиница</span>
                   <span class="price">От 4000 ₽</span>
                 </div>
                 <div class="buttons-container">
-                  <a class="brown-button href-button description-href" href="#">Подробнее</a>
+                  <a href="#" class="brown-button href-button description-href" >Подробнее</a>
                   <button class="blue-button favorite-button"><span>В избранное</span></button>
                 </div>
                 <div class="rating-container">
                   <div class="stars-container"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
-                  <div class="rate"><span>Рейтинг:8,5</span></div>
+                  <div class="rate"><span>Рейтинг: 8,5</span></div>
                 </div>
-              </div>
+              </li>
 
-              <div class="item">
+              <li class="item">
                 <a href="#"><img class="hotel-photo" src="images/catalog/hotel-2.png"></a>
                 <div class="title-container">
-                  <a class="title">Villas at Poco Diablo</a>
+                  <a class="title" href="#" class="title">Villas at Poco Diablo</a>
                 </div>
                 <div class="text-container">
                   <span class="name">Гостиница</span>
                   <span class="price">От 5000 ₽</span>
                 </div>
                 <div class="buttons-container">
-                  <a class="brown-button href-button description-href" href="#">Подробнее</a>
+                  <a href="#" class="brown-button href-button description-href">Подробнее</a>
                   <button class="blue-button in-favorite-button favorite-button"><span>В избранном</span></button>
                 </div>
                 <div class="rating-container">
                   <div class="stars-container"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
                   <div class="rate"><span>Рейтинг: 9,2</span></div>
                 </div>
-              </div>
+              </li>
 
-              <div class="item">
+              <li class="item">
                 <a href="#"><img class="hotel-photo" src="images/catalog/hotel-3.png"></a>
                 <div class="title-container">
-                  <a class="title">Desert Quail Inn</a>
+                  <a class="title" href="#" class="title">Desert Quail Inn</a>
                 </div>
                 <div class="text-container">
                   <span class="name">Гостиница</span>
                   <span class="price">От 2500 ₽</span>
                 </div>
                 <div class="buttons-container">
-                  <a class="brown-button href-button description-href" href="#">Подробнее</a>
+                  <a href="#" class="brown-button href-button description-href">Подробнее</a>
                   <button class="blue-button favorite-button"><span>В избранное</span></button>
                 </div>
                 <div class="rating-container">
                   <div class="stars-container"><div class="star"></div><div class="star"></div><div class="star"></div></div>
-                  <div class="rate"><span>Рейтинг:6,9</span></div>
+                  <div class="rate"><span>Рейтинг: 6,9</span></div>
                 </div>
-              </div>
-            </div>
-            <div class="frame-line">
-              <div class="item">
+              </li>
+            </ol>
+            <ol class="frame-line">
+              <li class="item">
                 <a href="#"><img class="hotel-photo" src="images/catalog/hotel-4.png"></a>
                 <div class="title-container">
-                  <a class="title">GreenTree Inn</a>
+                  <a class="title" href="#" class="title">GreenTree Inn</a>
                 </div>
                 <div class="text-container">
                   <span class="name">Гостиница</span>
                   <span class="price">От 1500 ₽</span>
                 </div>
                 <div class="buttons-container">
-                  <a class="brown-button href-button description-href" href="#">Подробнее</a>
+                  <a href="#" class="brown-button href-button description-href">Подробнее</a>
                   <button class="blue-button favorite-button"><span>В избранное</span></button>
                 </div>
                 <div class="rating-container">
                   <div class="stars-container"><div class="star"></div><div class="star"></div></div>
-                  <div class="rate"><span>Рейтинг:5,0</span></div>
+                  <div class="rate"><span>Рейтинг: 5,0</span></div>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ol>
           </section>
 
           <hr class="hr-devider">
 
           <section class="pagination">
             <h2 class="visually-hidden">Страницы каталога</h2>
-            <div class="frame-line">
-              <button class="pag cur-pag" value="1"><span>1</span></button>
-              <button class="pag" value="2"><span>2</span></button>
-              <button class="pag" value="3"><span>3</span></button>
-              <button class="pag" value="4"><span>4</span></button>
-              <div class="pag reduc-pag"><span>...</span></div>
-              <button class="pag" value="10"><span>10</span></button>
-            </div>
+            <ol class="frame-line">
+              <li class="pag cur-pag" value="1"><a href="#">1</a></li>
+              <li class="pag" value="2"><a href="#">2</a></li>
+              <li class="pag" value="3"><a href="#">3</a></li>
+              <li class="pag" value="4"><a href="#">4</a></li>
+              <li class="pag reduc-pag"><span>...</span></li>
+              <li class="pag" value="10"><a href="#">10</a></li>
+            </ol>
           </section>
         </section>
 
