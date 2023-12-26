@@ -15,9 +15,9 @@
           <nav class="header-main-navigation">
             <div class="logo-container"><a href="https://htmlacademy.ru/"><img class="logo" src="images/logo.svg" alt="Sedona Logo"></a></div>
             <ul class="header-main-nav-list">
-              <li><strong><a href="index.html">Главная</a></strong></li>
-              <li><strong><a href="#">О Седоне</a></strong></li>
-              <li><strong><a href="catalog.html">Гостиницы</a></strong></li>
+              <li><strong><a href="index.html">Главная</a></strong>
+              <li><strong><a href="#">О Седоне</a></strong>
+              <li><strong class="current-page"><a href="catalog.html">Гостиницы</a></strong>
             </ul>
           </nav>
           <div class="header-main-menu">
@@ -25,7 +25,7 @@
               <li><strong><a href="#"><img class="nav-search" src="images/index/nav_search.svg" alt="Поиск"></a></strong></li>
               <li><strong><a href="#"><img class="nav-favorite" src="images/index/nav_favorite.svg" alt="Избранное"><span class="round">12</span></a></strong></li>
             </ul>
-            <button class="brown-button"><strong>Хочу сюда!</strong></button>
+            <button class="brown-button main-menu-button"><strong>Хочу сюда!</strong></button>
           </div>
       </header>
 
@@ -81,13 +81,13 @@
                                   <p class="title">Стоимость, ₽:</p>
                                   <div class="range-slider">
                                     <div class="input">
-                                        <div class="left">
-                                            <input type="number" value="0">
-                                            <span>от</span>
+                                        <div class="left price-input">
+                                            <input id="left-price" type="number" value="0">
+                                            <label for="left-price">от</label>
                                         </div>
-                                        <div class="right">
-                                            <input type="number" value="9000">
-                                            <span>до</span>
+                                        <div class="right price-input">
+                                            <input id="right-price" type="number" value="9000">
+                                            <label for="right-price">до</label>
                                         </div>
                                     </div>
                                     <div class="handler">
@@ -190,8 +190,7 @@
                   <div class="rate"><span>Рейтинг: 6,9</span></div>
                 </div>
               </li>
-            </ol>
-            <ol class="frame-line">
+
               <li class="item">
                 <a href="#"><img class="hotel-photo" src="images/catalog/hotel-4.png"></a>
                 <div class="title-container">
@@ -211,6 +210,9 @@
                 </div>
               </li>
             </ol>
+            <!-- <ol class="frame-line">
+
+            </ol> -->
           </section>
 
           <hr class="hr-devider">
