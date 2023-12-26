@@ -24,6 +24,10 @@
 
                                 /* HEADER */
 
+html{
+    min-height: 100%;
+}
+
 ol{
     padding: 0; /*for ol*/
     margin:0;   /*for ol*/
@@ -37,10 +41,12 @@ body{
     font-weight: 400;
 }
 .body-container{
+    width:1200px;
+    justify-content: center;
     background-color:white;
     color:white;
     padding:0;
-    margin: 0 40px 0 40px;
+    margin: 0 auto 0 auto;
     box-shadow:0 0 15px 0 rgba(0, 0, 0, 0.20);
 }
 
@@ -71,17 +77,19 @@ header .header-main-navigation{
 header .header-main-menu{
     display:flex;
     flex-direction: row;
-    gap:20px;
+
     margin-left:auto;
     margin-right:70px;
 }
 
 header ul{
     padding:0;
+    display: inline;
 }
 
 header li{
-    display:inline;
+    display: inline;
+    white-space: nowrap;
 }
 
 header .header-main-navigation li{
@@ -97,7 +105,7 @@ header .header-main-menu button{
 }
 
 header .header-main-menu .nav-favorite{
-    position: absolute;
+
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -105,7 +113,7 @@ header .header-main-menu .nav-favorite{
 header .header-main-menu .round{
     color: #FFF;
     position: relative;
-    left: 10px;
+    left: -10px;
     right: 0;
     top: -15px;
     bottom: 0;
@@ -115,19 +123,38 @@ header .header-main-menu .round{
     background-color: #7DB54F;
     border-radius: 10px;
     font-size: 12px;
+    padding: 3px;
+}
+
+.current-page{
+    border-bottom: 2px solid #756257;
+    padding-bottom: 5%;
 }
 
 .brown-button{
     background:#756157;
+    width:160px;
+    padding:8px 0;
+}
+
+.hotel-search-label .brown-button{
+    width:auto;
+    padding:8px 50px;
 }
 
 .blue-button{
     background-color: #82B3D3;
+
+    padding:8px 0;
 }
 
-.blue-button{
-    background-color: none;
+.frame-box .blue-button{
+    width:auto;
 }
+
+/* .blue-button{
+    background-color: none;
+} */
 
 button, .href-button, input[type=submit], input[type=reset]{
     margin:auto;
@@ -137,6 +164,7 @@ button, .href-button, input[type=submit], input[type=reset]{
     border-radius: 4px;
     text-transform: uppercase;
     font-weight: 700;
+
 }
 
 a, a:visited, a:active{
@@ -149,6 +177,215 @@ a, a:visited, a:active{
 }
 
                                 /* MAIN */
+
+.header-main-menu form{
+    padding: 0;
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.popup-fade{
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+    background-color: rgba(242, 242, 242, 0.80);
+    pointer-events: none; /* элемент невидим для событий мыши */
+}
+
+.popup-fade:target{
+    display: block;
+    pointer-events:all /* элемент невидим для событий мыши */
+}
+
+.modal-window{
+    border-radius: 30px;
+    display: flex;
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top:auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    background-color: #FFF;
+    box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+    /* transition: opacity 200ms ease-in; */
+
+    width: 717px;
+    height: 50%;
+    padding:64px 70px;
+}
+
+.modal-form-button{
+    width:100%;
+    height: 12%;
+    text-align: center;
+    font-family: PT Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 120% */
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.modal-window .form .date-container{
+    display: flex;
+    flex-direction: column;
+    gap:48px;
+    width: 100%;
+}
+
+.modal-window .form .date-frame{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-window .form .date-frame label{
+    margin-right: 50px;
+    margin-left: 0;
+    width:100%;
+    font-family: PT Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 120% */
+    text-transform: capitalize;
+}
+
+.modal-window .form .date-frame input{
+    margin-left: auto;
+    margin-right: 0;
+    width: 3000px;
+    padding:12px 20px;
+    border-radius: 4px;
+}
+
+.modal-window .form input[type=date]{
+    border: none;
+    background-color: #F2F2F2;
+}
+.modal-window .form{
+    display:flex;
+    flex-direction: column;
+    gap: 64px;
+    width: 100%;
+}
+.modal-window{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-self: center;
+}
+
+.quantity-container{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.modal-window .close-modal-btn{
+    background-color: white;
+    color: none;
+    height: 52px;
+    width: 52px;
+    background-image: url("../images/index/modal-close.svg");
+    background-repeat: no-repeat;
+    margin-right: 0;
+    padding: 0;
+}
+
+.quantity-container button{
+    width:auto;
+    padding:14px 10px;
+    margin:0;
+    border-radius: 0;
+}
+
+.children-label{
+    display: flex;
+    margin-right: 46px;
+}
+
+.quantity-container label{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: PT Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; /* 120% */
+text-transform: capitalize;
+margin-right: 46px;
+}
+
+.quantity-container .btn-minus{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.quantity-container .btn-plus{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.children-label label{
+    display: flex;
+    margin-right: 10px;
+}
+
+
+.quantity-container input{
+    height:auto;
+    border: none;
+    background-color: #F2F2F2;
+    padding:14px 10px;
+    width:20px;
+    justify-content: space-between;
+}
+
+.quantity-container .adults-contanier{
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
+    margin-left: 0;
+}
+
+.quantity-container .children-contanier{
+    display: flex;
+    flex-direction: row;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.modal-window .form .title{
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.modal-window .form .container{
+    display: flex;
+    flex-direction: column;
+    gap:48px;
+    justify-content: center;
+    align-items: center;
+}
+
 /* .hero-welcome-banner{
 
 } */
@@ -195,6 +432,7 @@ a, a:visited, a:active{
     width:100%;
     display:flex;
     flex-direction:row;
+    flex-grow: 3;
 }
 
 .frame-box{
@@ -273,8 +511,8 @@ a, a:visited, a:active{
 .advantages-label .text-container, .recomendations-label .text-container{
     text-align: center;
     justify-content: center;
-    padding:28%;
-    width: 45%;
+    padding:85px;
+
 }
 
 .advantages-label .frame-box .title, .recomendations-label .frame-box .title{

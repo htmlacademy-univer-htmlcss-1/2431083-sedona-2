@@ -52,23 +52,34 @@ fieldset{
     flex-direction: row;
 }
 
-.filters-label .form-container .left{
+.filters-label .form-container > .left{
     display:flex;
     flex-direction: row;
     margin-right:auto;
     gap:70px;
 }
-.filters-label .form-container .right{
+.filters-label .form-container > .right{
     display:flex;
     flex-direction: row;
     margin-left:auto;
     gap:70px;
 }
 
-.filters-label .form-container .right .price-container-group .input span, .filters-label .form-container .right .price-container-group .input input{
+.input label{
+    color: rgba(0, 0, 0, 0.60);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 18px;
+}
+
+.filters-label .form-container .right .price-container-group .input input{
     border:none;
     color:black;
     font-size: 18px;
+    width:100%;
+    font-style: normal;
+    font-weight: 700;
 }
 
 .filters-label .form-container .right .price-container-group .input .left, .filters-label .form-container .right .price-container-group .input .right{
@@ -87,6 +98,12 @@ fieldset{
     position: relative;
     margin-left:auto;
     margin-right:auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.handler input{
+    width: 100%;
 }
 
 /* .filters-label .form-container .right .price-container-group .range-slider .handler input{
@@ -104,12 +121,17 @@ fieldset{
 .filters-label .form-container .right .price-container-group .range-slider .input .left{
     display: flex;
     border-radius: 4px 0 0 4px;
+    width:130px;
 }
 
+.price-input{
+    background-color: white;
+}
 
 .filters-label .form-container .right .price-container-group .range-slider .input .right{
     display:flex;
     border-radius: 0 4px 4px 0;
+    width:130px;
 }
 
 .filters-label .favorite-button .right .left, .filters-label .favorite-button .right .right{
@@ -222,6 +244,17 @@ input[type=checkbox], input[type=radio]{
     padding-top: 40px;
 }
 
+.catalog .catalog-items .brown-button{
+    width:auto;
+    padding: 8px 25px;
+}
+
+.catalog .catalog-items .blue-button{
+    width:auto;
+    padding: 8px 20px;
+    text-wrap: nowrap;
+}
+
 .catalog .catalog-items .item .text-container{
     color:#333333;
 }
@@ -262,7 +295,9 @@ input[type=checkbox], input[type=radio]{
 
 .catalog .catalog-items .frame-line{
     display: flex;
+    width:100%;
     flex-direction: row;
+    flex-wrap: wrap;
     gap:20px;
 }
 
@@ -273,6 +308,7 @@ input[type=checkbox], input[type=radio]{
     padding:20px;
     border-radius: 4px;
     border: 1px solid #E6E6E6;
+    width:298px;
 }
 
 .catalog .catalog-items .frame-line .item .title{
@@ -282,7 +318,7 @@ input[type=checkbox], input[type=radio]{
 .catalog .catalog-items .frame-line .item .hotel-photo
 {
     display: flex;
-    width: 100%;
+    width:300px;
 }
 
 .catalog .catalog-items .frame-line .item .text-container{
